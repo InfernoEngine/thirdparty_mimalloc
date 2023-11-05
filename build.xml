@@ -4,13 +4,16 @@
 	<GlobalSolutionName>ThirdParty</GlobalSolutionName>
 	<GlobalNamespace>potato</GlobalNamespace>
 
-	<StaticLibrary>
+	<Library>
 		<Name>thirdparty_mimalloc</Name>
 		<SourceRoot>src</SourceRoot>
 		<ThirdParty>true</ThirdParty>
 		<ExportedIncludeDirectory>include</ExportedIncludeDirectory>
+		<PreprocessorDefines>MI_WIN_NOREDIRECT</PreprocessorDefines>
 		<LocalIncludeDirectory>include</LocalIncludeDirectory>
 		<ThirdPartySourceFile>static.c</ThirdPartySourceFile>
-	</StaticLibrary>
+		<ThirdPartySharedGlobalExportDefine>MI_SHARED_LIB</ThirdPartySharedGlobalExportDefine>
+		<ThirdPartySharedLocalBuildDefine>MI_SHARED_LIB_EXPORT</ThirdPartySharedLocalBuildDefine>		
+	</Library>
 
 </Module>
